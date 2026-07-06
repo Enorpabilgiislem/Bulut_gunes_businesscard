@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Dijital Kartvizit</title>
+<meta name="description" content="Dijital kartvizit — tek dokunuşla kişilere kaydedin." />
+<meta name="theme-color" content="#232426" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#F7F5F3" media="(prefers-color-scheme: light)" />
+
+<!--
+  Tailwind CSS — compiled to static CSS at build time, NOT loaded from the
+  cdn.tailwindcss.com runtime script. This avoids the "should not be used
+  in production" console warning and keeps the page a single,
+  dependency-free file for GitHub Pages.
+-->
+<style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.static{position:static}.absolute{position:absolute}.relative{position:relative}.inset-x-0{left:0;right:0}.-bottom-1\.5{bottom:-.375rem}.-right-1\.5{right:-.375rem}.top-0{top:0}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.-mt-10{margin-top:-2.5rem}.-mt-2{margin-top:-.5rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-5{margin-top:1.25rem}.block{display:block}.inline{display:inline}.flex{display:flex}.hidden{display:none}.h-1{height:.25rem}.h-11{height:2.75rem}.h-20{height:5rem}.h-28{height:7rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[18px\]{height:18px}.h-\[19px\]{height:19px}.h-full{height:100%}.h-px{height:1px}.min-h-screen{min-height:100vh}.w-11{width:2.75rem}.w-20{width:5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[18px\]{width:18px}.w-\[19px\]{width:19px}.w-full{width:100%}.min-w-0{min-width:0}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-1\.5{gap:.375rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.overflow-hidden,.truncate{overflow:hidden}.truncate{text-overflow:ellipsis;white-space:nowrap}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-ink\/10{border-color:rgba(65,66,68,.1)}.border-ink\/20{border-color:rgba(65,66,68,.2)}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102/var(--tw-bg-opacity,1))}.bg-\[\#25D366\]\/10{background-color:rgba(37,211,102,.1)}.bg-accent\/10{background-color:rgba(244,103,54,.1)}.bg-accent\/15{background-color:rgba(244,103,54,.15)}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-ink{--tw-bg-opacity:1;background-color:rgb(65 66 68/var(--tw-bg-opacity,1))}.bg-ink\/10{background-color:rgba(65,66,68,.1)}.bg-ink\/5{background-color:rgba(65,66,68,.05)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.object-cover{-o-object-fit:cover;object-fit:cover}.p-\[3px\]{padding:3px}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:.25rem}.pb-3{padding-bottom:.75rem}.pb-4{padding-bottom:1rem}.pb-5{padding-bottom:1.25rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.text-center{text-align:center}.font-body,.font-display{font-family:Segoe UI,Tahoma,Geneva,Verdana,ui-sans-serif,system-ui,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.text-\[14px\]{font-size:14px}.text-\[7px\]{font-size:7px}.text-sm{font-size:.875rem;line-height:1.25rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-\[0\.14em\]{letter-spacing:.14em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.text-\[\#128C4A\]{--tw-text-opacity:1;color:rgb(18 140 74/var(--tw-text-opacity,1))}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102/var(--tw-text-opacity,1))}.text-accent{--tw-text-opacity:1;color:rgb(244 103 54/var(--tw-text-opacity,1))}.text-ink{--tw-text-opacity:1;color:rgb(65 66 68/var(--tw-text-opacity,1))}.text-ink\/25{color:rgba(65,66,68,.25)}.text-ink\/35{color:rgba(65,66,68,.35)}.text-ink\/40{color:rgba(65,66,68,.4)}.text-ink\/60{color:rgba(65,66,68,.6)}.text-ink\/70{color:rgba(65,66,68,.7)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.shadow-black\/5{--tw-shadow-color:rgba(0,0,0,.05);--tw-shadow:var(--tw-shadow-colored)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-2,.ring-4{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-white{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255/var(--tw-ring-opacity,1))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.hover\:bg-\[\#25D366\]\/15:hover{background-color:rgba(37,211,102,.15)}.hover\:bg-accent\/15:hover{background-color:rgba(244,103,54,.15)}.hover\:bg-ink\/10:hover{background-color:rgba(65,66,68,.1)}.hover\:bg-ink\/5:hover{background-color:rgba(65,66,68,.05)}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:bg-ink\/10:active{background-color:rgba(65,66,68,.1)}@media (prefers-color-scheme:dark){.dark\:border-paper\/10{border-color:hsla(30,20%,96%,.1)}.dark\:border-paper\/25{border-color:hsla(30,20%,96%,.25)}.dark\:bg-\[\#2C2D30\]{--tw-bg-opacity:1;background-color:rgb(44 45 48/var(--tw-bg-opacity,1))}.dark\:bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity,1))}.dark\:bg-paper{--tw-bg-opacity:1;background-color:rgb(247 245 243/var(--tw-bg-opacity,1))}.dark\:bg-paper\/10{background-color:hsla(30,20%,96%,.1)}.dark\:text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102/var(--tw-text-opacity,1))}.dark\:text-ink{--tw-text-opacity:1;color:rgb(65 66 68/var(--tw-text-opacity,1))}.dark\:text-paper{--tw-text-opacity:1;color:rgb(247 245 243/var(--tw-text-opacity,1))}.dark\:text-paper\/25{color:hsla(30,20%,96%,.25)}.dark\:text-paper\/35{color:hsla(30,20%,96%,.35)}.dark\:text-paper\/40{color:hsla(30,20%,96%,.4)}.dark\:text-paper\/60{color:hsla(30,20%,96%,.6)}.dark\:text-paper\/70{color:hsla(30,20%,96%,.7)}.dark\:shadow-black\/40{--tw-shadow-color:rgba(0,0,0,.4);--tw-shadow:var(--tw-shadow-colored)}.dark\:ring-\[\#2C2D30\]{--tw-ring-opacity:1;--tw-ring-color:rgb(44 45 48/var(--tw-ring-opacity,1))}.dark\:hover\:bg-paper\/20:hover{background-color:hsla(30,20%,96%,.2)}.dark\:hover\:bg-paper\/5:hover{background-color:hsla(30,20%,96%,.05)}.dark\:active\:bg-paper\/10:active{background-color:hsla(30,20%,96%,.1)}}
+</style>
+
+<style>
+  html, body { -webkit-tap-highlight-color: transparent; }
+  body { background: #F7F5F3; }
+  @media (prefers-color-scheme: dark) { body { background: #232426; } }
+
+  /* Signature element: a single slow foil sweep across the card border in
+     the brand orange, once on load */
+  @keyframes foil-sweep {
+    0%   { background-position: -150% 0; }
+    100% { background-position: 250% 0; }
+  }
+  .foil-edge {
+    background: linear-gradient(
+      100deg,
+      transparent 30%,
+      rgba(244, 103, 54, 0.55) 45%,
+      rgba(255, 168, 122, 0.9) 50%,
+      rgba(244, 103, 54, 0.55) 55%,
+      transparent 70%
+    );
+    background-size: 250% 100%;
+    background-position: -150% 0;
+    animation: foil-sweep 2.2s ease-out 0.3s 1 forwards;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .foil-edge { animation: none; }
+  }
+
+  .card-surface {
+    background: #FFFFFF;
+    border: 1px solid rgba(65, 66, 68, 0.1);
+  }
+  @media (prefers-color-scheme: dark) {
+    .card-surface { background: #2C2D30; border-color: rgba(255,255,255,0.08); }
+  }
+
+  /* Fallback cover banner when no coverUrl photo is supplied */
+  .cover-fallback {
+    background:
+      radial-gradient(120% 180% at 15% 0%, rgba(255,255,255,0.14) 0%, transparent 55%),
+      linear-gradient(120deg, #414244 0%, #2A2B2D 55%, #F46736 145%);
+  }
+
+  .row-link:active { transform: scale(0.98); }
+
+  .avatar-ring {
+    background: conic-gradient(from 180deg, #F46736, #FFAF8C, #F46736);
+  }
+
+</style>
+</head>
+
+<body class="font-body min-h-screen flex items-center justify-center px-4 py-10 text-ink dark:text-paper">
+
+  <main class="w-full max-w-sm">
+
+    <!-- ============ CARD ============ -->
+    <section class="card-surface relative rounded-3xl shadow-xl shadow-black/5 dark:shadow-black/40 overflow-hidden">
+
+      <!-- Foil sweep accent line -->
+      <div class="foil-edge absolute inset-x-0 top-0 h-1"></div>
+
+      <!-- Cover banner -->
+      <div id="coverBanner" class="cover-fallback h-28 w-full"></div>
+
+      <!-- Avatar + logo badge, overlapping the banner -->
+      <div class="px-6">
+        <div class="relative -mt-10 w-20 h-20">
+          <div class="avatar-ring w-20 h-20 rounded-full p-[3px] shadow-md">
+            <img
+              id="avatarImg"
+              src=""
+              alt="Profil fotoğrafı"
+              class="w-full h-full object-cover rounded-full ring-4 ring-white dark:ring-[#2C2D30] bg-gray-200 dark:bg-gray-700"
+            />
+          </div>
+          <div id="logoBadge" class="absolute -right-1.5 -bottom-1.5 w-8 h-8 rounded-full bg-white dark:bg-[#2C2D30] ring-2 ring-white dark:ring-[#2C2D30] shadow-md flex items-center justify-center overflow-hidden">
+            <img id="logoImg" src="" alt="Şirket logosu" class="w-full h-full object-cover hidden" />
+            <span id="logoFallback" class="text-[7px] font-display font-bold tracking-tight text-accent"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Name / title -->
+      <div class="px-6 pt-3 pb-5">
+        <h1 id="nameEl" class="font-display font-semibold text-2xl tracking-tight"></h1>
+        <p id="titleEl" class="text-sm text-ink/60 dark:text-paper/60 mt-1"></p>
+        <p id="companyEl" class="text-[13px] uppercase tracking-[0.14em] text-accent font-medium mt-2"></p>
+      </div>
+
+      <!-- Divider -->
+      <div class="h-px mx-6 bg-ink/10 dark:bg-paper/10"></div>
+
+      <!-- Action buttons: share + save -->
+      <div class="px-6 pt-1 pb-4 flex items-center gap-2.5">
+        <button
+          id="shareBtn"
+          class="row-link flex-1 flex items-center justify-center gap-1.5 bg-ink text-white dark:bg-paper dark:text-ink font-semibold text-[13px] rounded-full py-2.5 px-3 shadow-md active:scale-[0.98] transition-transform"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M19 8v6M22 11h-6" />
+          </svg>
+          <span id="shareBtnLabel" class="truncate">Gönder | Share</span>
+        </button>
+        <button
+          id="saveBtn"
+          class="row-link flex-1 flex items-center justify-center gap-1.5 bg-transparent text-ink dark:text-paper border border-ink/20 dark:border-paper/25 font-semibold text-[13px] rounded-full py-2.5 px-3 active:scale-[0.98] transition-transform"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 15V3m0 12l-4-4m4 4l4-4" />
+            <path d="M2 17l.6 3.2A2 2 0 0 0 4.57 22h14.86a2 2 0 0 0 1.97-1.8L22 17" />
+          </svg>
+          Kaydet | Save
+        </button>
+      </div>
+      <p id="saveHint" class="text-center text-[11px] text-ink/40 dark:text-paper/40 -mt-2 pb-3 px-6"></p>
+
+      <!-- Divider -->
+      <div class="h-px mx-6 bg-ink/10 dark:bg-paper/10"></div>
+
+      <!-- Contact rows -->
+      <div class="px-4 py-3 space-y-1" id="contactRows"></div>
+
+      <!-- WhatsApp button -->
+      <div class="px-6 pb-1" id="whatsappWrap">
+        <a
+          id="whatsappBtn"
+          href="#"
+          target="_blank" rel="noopener"
+          class="row-link flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/15 transition"
+        >
+          <span class="w-9 h-9 shrink-0 rounded-full bg-[#25D366] flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.08-1.33A9.96 9.96 0 0 0 12.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm5.86 14.14c-.25.7-1.45 1.36-2 1.44-.53.08-1.05.28-3.53-.74-2.97-1.22-4.9-4.22-5.05-4.42-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.3.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.26 1.63 2.04 1.12 1 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.73-.85.93-1.15.2-.3.4-.24.66-.15.27.1 1.7.8 2 .95.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/>
+            </svg>
+          </span>
+          <span class="flex-1 min-w-0">
+            <span class="block text-[14px] font-medium text-[#128C4A] dark:text-[#25D366]">WhatsApp</span>
+          </span>
+          <span class="text-[#25D366]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- "What we do" panel link -->
+      <div class="px-6 pt-2 pb-5" id="aboutWrap">
+        <a
+          id="aboutBtn"
+          href="#"
+          target="_blank" rel="noopener"
+          class="row-link flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-accent/10 hover:bg-accent/15 transition"
+        >
+          <span class="w-9 h-9 shrink-0 rounded-full bg-accent/15 flex items-center justify-center text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>
+            </svg>
+          </span>
+          <span class="flex-1 min-w-0">
+            <span id="aboutLabelEl" class="block text-[14px] font-medium text-accent"></span>
+          </span>
+          <span class="text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div id="socialSection" class="border-t border-ink/10 dark:border-paper/10 px-6 py-4">
+        <div id="socialRow" class="flex items-center justify-center gap-3"></div>
+      </div>
+
+    </section>
+
+    <p class="text-center text-[11px] text-ink/35 dark:text-paper/35 mt-5">
+      Dijital kartvizit · herhangi bir alana dokunarak işlem yapabilirsiniz
+    </p>
+  </main>
+
+<script>
+/* =========================================================================
+   PROFILE CONFIGURATION
+   -------------------------------------------------------------------------
+   Edit ONLY this object to re-brand the card for a new person/company.
+   Nothing below this block needs to change for normal use.
+   ========================================================================= */
+const PROFILE = {
+  // Basic identity
+  firstName: "Bulut",
+  lastName: "Güneş",
+  title: "Makine Mühendisi",       // Turkish job title
+  titleEn: "Mechanical Engineer",  // English job title (shown as "TR - EN"), leave "" to hide
+  company: "ENORPA Enerji Sanayi ve Ticaret Ltd. Şti.",
+
+  // Cover banner shown behind the avatar. Use any public image URL
+  // (ideally a wide photo, e.g. a facility/product shot). Leave "" to
+  // fall back to a brand-colored gradient banner.
+  coverUrl: "",
+
+  // Small circular company logo badge overlapping the avatar.
+  // Leave "" to fall back to an "ENORPA" text badge.
+  logoUrl: "",
+
+  // Profile picture. Use any public image URL, or leave "" to fall back
+  // to auto-generated initials.
+  photoUrl: "",
+
+  // Contact details — leave any field "" to hide it from the card
+  phone: "+90 507 940 32 11",         // shown + used in tel: link + vCard
+  email: "mavi@enorpa.com",
+  website: "",                        // e.g. "https://www.enorpa.com.tr"
+
+  // WhatsApp number in international format, digits only (no +, spaces or
+  // dashes), e.g. "905079403211". Leave "" to hide the WhatsApp button.
+  // If left "" but `phone` is set, Claude/you can just copy the digits
+  // from `phone` here.
+  whatsapp: "905079403211",
+
+  // Link to a page/panel that explains what the company or team does
+  // (e.g. an "about us" page, a Notion/Canva panel, a PDF). Leave "" to
+  // hide this button entirely.
+  aboutUrl: "https://www.enorpa.com.tr",
+  aboutLabel: "Ne İş Yapıyoruz?",
+
+  // Optional physical address (leave any field "" to omit it everywhere)
+  address: {
+    street: "",
+    city: "Isparta",
+    state: "",
+    zip: "",
+    country: "Türkiye",
+  },
+
+  // Social links shown as icon row at the bottom of the card.
+  // "type" must be one of: linkedin, instagram, twitter, github, tiktok
+  // (WhatsApp has its own dedicated button above, not part of this row)
+  // Leave the array empty ( [] ) to hide the whole social row.
+  social: [],
+
+  // Filename used for the downloaded vCard, e.g. "Bulut-Gunes.vcf"
+  get vcfFileName() {
+    return `${this.firstName}-${this.lastName}`.replace(/\s+/g, "-") + ".vcf";
+  },
+};
+/* ========================================================================= */
+
+
+/* -------------------------------------------------------------------------
+   ICONS (inline SVG, no external icon library needed)
+   ------------------------------------------------------------------------- */
+const ICONS = {
+  phone: `<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>`,
+  email: `<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/>`,
+  web: `<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>`,
+  pin: `<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>`,
+  linkedin: `<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>`,
+  instagram: `<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>`,
+  twitter: `<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>`,
+  github: `<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91.5S18.73.15 16 2a13.38 13.38 0 0 0-7 0C6.27.15 5.09.5 5.09.5A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>`,
+  whatsapp: `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>`,
+  tiktok: `<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>`,
+  chevron: `<path d="m9 18 6-6-6-6"/>`,
+};
+
+function svg(name, extraClass = "w-5 h-5") {
+  return `<svg xmlns="http://www.w3.org/2000/svg" class="${extraClass}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ""}</svg>`;
+}
+
+/* -------------------------------------------------------------------------
+   RENDER: header
+   ------------------------------------------------------------------------- */
+const fullName = `${PROFILE.firstName} ${PROFILE.lastName}`.trim();
+
+document.getElementById("nameEl").textContent = fullName;
+document.title = `${fullName} — Dijital Kartvizit`;
+
+const titleEl = document.getElementById("titleEl");
+const titleParts = [PROFILE.title, PROFILE.titleEn].filter(Boolean);
+if (titleParts.length) { titleEl.textContent = titleParts.join(" - "); } else { titleEl.style.display = "none"; }
+
+const companyEl = document.getElementById("companyEl");
+if (PROFILE.company) { companyEl.textContent = PROFILE.company; } else { companyEl.style.display = "none"; }
+
+// Cover banner: real photo if provided, otherwise a brand-colored gradient
+const coverBanner = document.getElementById("coverBanner");
+if (PROFILE.coverUrl) {
+  coverBanner.style.backgroundImage = `url("${PROFILE.coverUrl}")`;
+  coverBanner.style.backgroundSize = "cover";
+  coverBanner.style.backgroundPosition = "center";
+} // else: .cover-fallback CSS class already supplies the gradient
+
+// Company logo badge: real logo image if provided, otherwise a text badge
+const logoImg = document.getElementById("logoImg");
+const logoFallback = document.getElementById("logoFallback");
+if (PROFILE.logoUrl) {
+  logoImg.src = PROFILE.logoUrl;
+  logoImg.classList.remove("hidden");
+  logoFallback.style.display = "none";
+} else {
+  logoFallback.textContent = "EN";
+}
+
+const avatarImg = document.getElementById("avatarImg");
+if (PROFILE.photoUrl) {
+  avatarImg.src = PROFILE.photoUrl;
+} else {
+  const initials = (PROFILE.firstName[0] || "") + (PROFILE.lastName[0] || "");
+  avatarImg.src =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+        <rect width="100%" height="100%" fill="#414244"/>
+        <text x="50%" y="54%" font-family="'Segoe UI', Tahoma, sans-serif" font-size="72"
+          fill="#F46736" text-anchor="middle" dominant-baseline="middle" font-weight="600">
+          ${initials.toUpperCase()}
+        </text>
+      </svg>`);
+}
+
+/* -------------------------------------------------------------------------
+   RENDER: contact rows
+   ------------------------------------------------------------------------- */
+function contactRow({ icon, label, value, href }) {
+  return `
+    <a href="${href}" target="_blank" rel="noopener"
+       class="row-link flex items-center gap-3 px-2 py-2.5 rounded-xl transition hover:bg-ink/5 dark:hover:bg-paper/5 active:bg-ink/10 dark:active:bg-paper/10">
+      <span class="w-9 h-9 shrink-0 rounded-full bg-ink/5 dark:bg-paper/10 flex items-center justify-center text-ink/70 dark:text-paper/70">
+        ${svg(icon, "w-[18px] h-[18px]")}
+      </span>
+      <span class="flex-1 min-w-0">
+        <span class="block text-[11px] uppercase tracking-wide text-ink/40 dark:text-paper/40">${label}</span>
+        <span class="block text-[14px] font-medium truncate">${value}</span>
+      </span>
+      <span class="text-ink/25 dark:text-paper/25">${svg("chevron", "w-4 h-4")}</span>
+    </a>`;
+}
+
+const rowsHtml = [];
+if (PROFILE.phone) {
+  rowsHtml.push(contactRow({ icon: "phone", label: "Telefon", value: PROFILE.phone, href: `tel:${PROFILE.phone.replace(/\s+/g, "")}` }));
+}
+if (PROFILE.email) {
+  rowsHtml.push(contactRow({ icon: "email", label: "E-posta", value: PROFILE.email, href: `mailto:${PROFILE.email}` }));
+}
+if (PROFILE.website) {
+  const websiteLabel = PROFILE.website.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  rowsHtml.push(contactRow({ icon: "web", label: "Web Sitesi", value: websiteLabel, href: PROFILE.website }));
+}
+{
+  const addr = PROFILE.address || {};
+  const addrParts = [addr.city, addr.state, addr.country].filter(Boolean);
+  if (addrParts.length) {
+    const addrValue = addrParts.join(", ");
+    rowsHtml.push(contactRow({
+      icon: "pin",
+      label: "Konum",
+      value: addrValue,
+      href: `https://maps.google.com/?q=${encodeURIComponent(addrValue)}`,
+    }));
+  }
+}
+document.getElementById("contactRows").innerHTML = rowsHtml.join("");
+
+/* -------------------------------------------------------------------------
+   RENDER: social icon row
+   ------------------------------------------------------------------------- */
+const socialHtml = (PROFILE.social || [])
+  .filter((s) => ICONS[s.type])
+  .map(
+    (s) => `
+    <a href="${s.url}" target="_blank" rel="noopener"
+       aria-label="${s.type}"
+       class="row-link w-11 h-11 rounded-full bg-ink/5 dark:bg-paper/10 flex items-center justify-center text-ink/70 dark:text-paper/70 hover:bg-ink/10 dark:hover:bg-paper/20 transition">
+      ${svg(s.type, "w-[19px] h-[19px]")}
+    </a>`
+  )
+  .join("");
+const socialRowEl = document.getElementById("socialRow");
+socialRowEl.innerHTML = socialHtml;
+if (!socialHtml) {
+  document.getElementById("socialSection").style.display = "none";
+}
+
+/* -------------------------------------------------------------------------
+   VCARD GENERATION + DOWNLOAD
+   Builds a standards-compliant vCard 3.0 string (CRLF line endings, escaped
+   special characters) and triggers a download that opens directly in the
+   native Contacts app on both iOS Safari and Android Chrome.
+   ------------------------------------------------------------------------- */
+function escapeVCardValue(value = "") {
+  return String(value)
+    .replace(/\\/g, "\\\\")
+    .replace(/;/g, "\\;")
+    .replace(/,/g, "\\,")
+    .replace(/\n/g, "\\n");
+}
+
+function buildVCard(profile) {
+  const CRLF = "\r\n";
+  const addr = profile.address || {};
+  const hasAddress = addr.street || addr.city || addr.state || addr.zip || addr.country;
+
+  const lines = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    `N:${escapeVCardValue(profile.lastName)};${escapeVCardValue(profile.firstName)};;;`,
+    `FN:${escapeVCardValue(`${profile.firstName} ${profile.lastName}`.trim())}`,
+  ];
+
+  if (profile.company) lines.push(`ORG:${escapeVCardValue(profile.company)}`);
+  if (profile.title) lines.push(`TITLE:${escapeVCardValue(profile.title)}`);
+  if (profile.phone) lines.push(`TEL;TYPE=CELL,VOICE:${escapeVCardValue(profile.phone)}`);
+  if (profile.email) lines.push(`EMAIL;TYPE=INTERNET:${escapeVCardValue(profile.email)}`);
+  if (profile.website) lines.push(`URL:${escapeVCardValue(profile.website)}`);
+
+  if (hasAddress) {
+    // ADR fields: PO Box;Extended;Street;City;State;Zip;Country
+    lines.push(
+      `ADR;TYPE=WORK:;;${escapeVCardValue(addr.street)};${escapeVCardValue(addr.city)};${escapeVCardValue(
+        addr.state
+      )};${escapeVCardValue(addr.zip)};${escapeVCardValue(addr.country)}`
+    );
+  }
+
+  (profile.social || []).forEach((s) => {
+    lines.push(`URL;TYPE=${escapeVCardValue(s.type).toUpperCase()}:${escapeVCardValue(s.url)}`);
+  });
+
+  lines.push("END:VCARD");
+
+  return lines.join(CRLF) + CRLF;
+}
+
+function saveToContacts() {
+  const vCardString = buildVCard(PROFILE);
+  const blob = new Blob([vCardString], { type: "text/vcard;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.setAttribute("download", PROFILE.vcfFileName);
+  // Some iOS Safari versions handle vCards more reliably when navigated to
+  // directly rather than only appended/clicked, so we do both: append+click
+  // for Android/desktop browsers, and fall back to direct navigation.
+  document.body.appendChild(link);
+
+  try {
+    link.click();
+  } finally {
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  }
+}
+
+document.getElementById("saveBtn").addEventListener("click", saveToContacts);
+
+/* Hint text under the button */
+document.getElementById("saveHint").textContent =
+  ".vcf indirir, doğrudan Kişiler uygulamasında açılır";
+
+/* -------------------------------------------------------------------------
+   WHATSAPP BUTTON
+   ------------------------------------------------------------------------- */
+const whatsappWrap = document.getElementById("whatsappWrap");
+if (PROFILE.whatsapp) {
+  const digits = PROFILE.whatsapp.replace(/\D/g, "");
+  const message = encodeURIComponent(`Merhaba ${PROFILE.firstName}, dijital kartvizitiniz üzerinden yazıyorum.`);
+  document.getElementById("whatsappBtn").href = `https://wa.me/${digits}?text=${message}`;
+} else {
+  whatsappWrap.style.display = "none";
+}
+
+/* -------------------------------------------------------------------------
+   "WHAT WE DO" PANEL LINK
+   ------------------------------------------------------------------------- */
+const aboutWrap = document.getElementById("aboutWrap");
+if (PROFILE.aboutUrl) {
+  document.getElementById("aboutBtn").href = PROFILE.aboutUrl;
+  document.getElementById("aboutLabelEl").textContent = PROFILE.aboutLabel || "Ne İş Yapıyoruz?";
+} else {
+  aboutWrap.style.display = "none";
+}
+
+/* -------------------------------------------------------------------------
+   SHARE / EXCHANGE BUTTON
+   Uses the native Web Share API when available (lets the person send the
+   card link straight to another app — Messages, WhatsApp, Mail, etc).
+   Falls back to copying the link to the clipboard on unsupported browsers.
+   ------------------------------------------------------------------------- */
+async function shareCard() {
+  const shareData = {
+    title: `${fullName} — Dijital Kartvizit`,
+    text: `${fullName}${PROFILE.title ? " · " + PROFILE.title : ""}${PROFILE.company ? " · " + PROFILE.company : ""}`,
+    url: window.location.href,
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      // User canceled the share sheet — no action needed.
+    }
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    const label = document.getElementById("shareBtnLabel");
+    const original = label.textContent;
+    label.textContent = "Kopyalandı | Copied";
+    setTimeout(() => { label.textContent = original; }, 1800);
+  } catch (err) {
+    window.open(shareData.url, "_blank");
+  }
+}
+
+document.getElementById("shareBtn").addEventListener("click", shareCard);
+
+</script>
+</body>
+</html>
