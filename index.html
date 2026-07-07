@@ -75,7 +75,6 @@
   .duration-300 { transition-duration: 300ms; }
   .max-w-\[85\%\] { max-w: 85%; }
   .w-72 { width: 18rem; }
-  .mb-4 { margin-bottom: 1rem; }
   .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
   
   /* Katalog butonları arası dikey boşluk ayarı */
@@ -190,21 +189,24 @@
     </p>
   </main>
 
-  <div id="qrModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 ease-out">
-    <div id="qrModalContent" class="bg-white dark:bg-[#2C2D30] p-6 rounded-3xl shadow-2xl max-w-[85%] w-72 text-center transform scale-90 transition-all duration-300 ease-out flex flex-col items-center justify-center">
-      <h3 class="font-display font-semibold text-lg mb-4 text-ink dark:text-paper w-full">Kartvizit QR Kodu</h3>
+  <div id="qrModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-out" style="display: flex; align-items: center; justify-content: center;">
+    <div id="qrModalContent" class="bg-white dark:bg-[#2C2D30] p-6 rounded-3xl shadow-2xl max-w-[85%] w-72 text-center transform scale-90 transition-all duration-300 ease-out" style="display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
       
-      <div class="bg-white p-3 rounded-2xl shadow-inner flex items-center justify-center" style="width: 216px; height: 216px; margin: 0 auto;">
+      <h3 class="font-display font-semibold text-lg text-ink dark:text-paper" style="margin-bottom: 1rem; width: 100%; display: block;">Kartvizit QR Kodu</h3>
+      
+      <div class="bg-white p-3 rounded-2xl shadow-inner" style="width: 216px; height: 216px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; margin-bottom: 1.25rem;">
         <img 
           src="https://github.com/user-attachments/assets/0fef0d8b-5d33-4317-bbfe-69ecd61d55ad" 
           alt="QR Code" 
           class="object-contain block bg-white" 
-          style="width: 192px; height: 192px;"
+          style="width: 192px; height: 192px; display: block; margin: 0 auto;"
         />
       </div>
-      <button id="closeQrBtn" class="mt-5 w-full bg-ink text-white dark:bg-paper dark:text-ink font-semibold text-[14px] rounded-full py-2.5 active:scale-[0.98] transition-transform">
+      
+      <button id="closeQrBtn" class="bg-ink text-white dark:bg-paper dark:text-ink font-semibold text-[14px] rounded-full py-2.5 active:scale-[0.98] transition-transform" style="width: 100%; display: block;">
         Kapat | Close
       </button>
+      
     </div>
   </div>
 
@@ -221,7 +223,7 @@ const PROFILE = {
   lastName: "Güneş",
   title: "Makine Mühendisi",       // Turkish job title
   titleEn: "Mechanical Engineer",  // English job title (shown as "TR - EN"), leave "" to hide
-  company: " Enerji Sanayi ve Ticaret Ltd. Şti.",
+  company: "ENORPA",
 
   // Cover banner shown behind the avatar. Use any public image URL
   coverUrl: "https://github.com/user-attachments/assets/6c7e558a-63fb-4f89-a532-1f1a43cb5ba6",
@@ -277,7 +279,7 @@ const ICONS = {
   instagram: `<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>`,
   twitter: `<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>`,
   github: `<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91.5S18.73.15 16 2a13.38 13.38 0 0 0-7 0C6.27.15 5.09.5 5.09.5A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>`,
-  whatsapp: `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>`,
+  whatsapp: `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>`,
   tiktok: `<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>`,
   chevron: `<path d="m9 18 6-6-6-6"/>`,
 };
